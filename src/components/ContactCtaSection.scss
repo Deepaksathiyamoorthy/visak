@@ -1,0 +1,124 @@
+.contact-cta-section {
+    padding: 6rem 0;
+    background-color: #ffffff;
+
+    .container {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 2.5rem;
+    }
+
+    .cta-card {
+        background-color: #f2f9f9; // Light teal/blue tint matching the new design
+        border-radius: 20px;
+        box-shadow: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 5rem;
+        gap: 3rem;
+        overflow: hidden;
+    }
+
+    .cta-content {
+        flex: 1;
+        max-width: 520px;
+    }
+
+    .section-label {
+        color: var(--brand-teal);
+        font-weight: 700;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        display: block;
+        margin-bottom: 0.85rem;
+        text-transform: uppercase;
+    }
+
+    .cta-title {
+        font-family: var(--font-display);
+        font-size: 2.25rem;
+        color: var(--text-dark);
+        line-height: 1.15;
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+    }
+
+    .cta-desc {
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        line-height: 1.65;
+        margin-bottom: 2rem;
+    }
+
+    .btn-teal {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.75rem;
+        font-size: 0.9rem;
+        background-color: var(--brand-teal);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+            background-color: var(--brand-teal-dark);
+            transform: translateY(-2px);
+        }
+    }
+
+    .cta-image-wrapper {
+        flex: 0 0 340px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cta-image {
+        width: 100%;
+        max-height: 320px;
+        object-fit: contain;
+    }
+
+    // Responsive
+    @media (max-width: 1024px) {
+        .cta-card {
+            flex-direction: column;
+            padding: 2.5rem;
+            gap: 2.5rem;
+        }
+
+        .cta-content {
+            max-width: 100%;
+            text-align: center;
+
+            br {
+                display: none;
+            }
+        }
+
+        .cta-image-wrapper {
+            flex: none;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .cta-image {
+            max-width: 320px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .cta-card {
+            padding: 2rem 1.5rem;
+        }
+
+        .cta-title {
+            font-size: 1.85rem;
+        }
+    }
+}

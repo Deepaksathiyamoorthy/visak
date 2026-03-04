@@ -1,0 +1,103 @@
+.trusted-industries {
+    padding: 6rem 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.trusted-header-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.trusted-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .trusted-title {
+        font-family: var(--font-display);
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .trusted-desc {
+        text-align: right;
+        color: #666666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+        max-width: 500px;
+    }
+}
+
+.trusted-carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.trusted-carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    /* CSS animation for infinite scrolling left to right */
+    animation: scrollLeftToRight 40s linear infinite;
+
+    /* Pause animation on hover for better UX */
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes scrollLeftToRight {
+    0% {
+        transform: translateX(calc(-50% - 0.75rem));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.trusted-card {
+    position: relative;
+    width: 320px;
+    height: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    .trusted-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .trusted-card-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 0.7) 100%
+        );
+    }
+
+    .trusted-card-label {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        color: #ffffff;
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        font-weight: 700;
+        z-index: 10;
+    }
+}

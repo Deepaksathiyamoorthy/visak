@@ -1,0 +1,110 @@
+.clients {
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+    padding: 1.75rem 0;
+    overflow: hidden;
+
+    .clients-inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 2.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .clients-counter {
+        flex-shrink: 0;
+        padding-right: 2rem;
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1;
+            margin-bottom: 0.1rem;
+        }
+
+        p {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--text-gray);
+            letter-spacing: 0.12em;
+            white-space: nowrap;
+        }
+    }
+
+    .clients-divider {
+        width: 1px;
+        height: 48px;
+        background: #d1d5db;
+        flex-shrink: 0;
+        margin-right: 2rem;
+    }
+
+    .clients-track-wrap {
+        flex: 1;
+        overflow: hidden;
+        mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    }
+
+    .clients-track {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        animation: marquee 35s linear infinite;
+    }
+
+    .logo-item {
+        flex-shrink: 0;
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+
+        img {
+            max-width: 110px;
+            max-height: 40px;
+            object-fit: contain;
+            opacity: 0.65;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .clients {
+        .clients-inner {
+            padding: 0 1.5rem;
+        }
+
+        .clients-counter {
+            padding-right: 1.25rem;
+
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        .logo-item {
+            width: 110px;
+            padding: 0 0.75rem;
+
+            img {
+                max-width: 85px;
+                max-height: 35px;
+            }
+        }
+    }
+}

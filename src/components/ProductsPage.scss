@@ -1,0 +1,437 @@
+.prod-page {
+    font-family: var(--font-main);
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+// -------- Navbar --------
+.prod-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: #ffffff;
+    border-bottom: 1px solid #e8e8e8;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+    .prod-nav-inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0.75rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-shrink: 0;
+
+        .logo-box {
+            width: 24px;
+            height: 24px;
+            background: var(--brand-teal);
+            border-radius: 4px;
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--brand-teal);
+        }
+    }
+
+    .nav-center {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: #4b5563;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: color 0.2s;
+
+        &:hover,
+        &.active {
+            color: var(--brand-teal);
+        }
+    }
+
+    .btn-contact {
+        background: var(--brand-teal);
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1.15rem;
+        border-radius: 7px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        flex-shrink: 0;
+
+        &:hover {
+            background: var(--brand-teal-dark);
+        }
+    }
+}
+
+// -------- Hero --------
+.prod-hero {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    .prod-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.6) 50%,
+            rgba(0, 0, 0, 0.3) 100%
+        );
+    }
+
+    .prod-hero-content {
+        position: relative;
+        z-index: 10;
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 2.5rem;
+        width: 100%;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #ffffff;
+        color: #333;
+        padding: 0.3rem 0.8rem;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+        
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--brand-teal);
+            border-radius: 50%;
+        }
+    }
+
+    .hero-title {
+        font-family: var(--font-display);
+        color: #ffffff;
+        font-size: 2.75rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+    }
+
+    .hero-desc {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        max-width: 600px;
+        margin-bottom: 2rem;
+    }
+
+    .btn-teal {
+        background: var(--brand-teal);
+        color: #fff;
+        border: none;
+        padding: 0.8rem 1.75rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease, background 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            background: var(--brand-teal-dark);
+        }
+    }
+}
+
+// -------- Product List Content --------
+.prod-details {
+    padding: 4rem 0;
+    
+    .prod-details-inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+.prod-card-row {
+    background: #262626;
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    color: #ffffff;
+    align-items: stretch;
+
+    .prod-card-content {
+        flex: 1;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .prod-category {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: #d1d5db; /* Light gray text */
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .prod-title {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .prod-desc {
+            font-size: 0.875rem;
+            color: #9ca3af; /* Gray text */
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .prod-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+
+        .prod-applications {
+            .app-label {
+                display: block;
+                font-size: 0.65rem;
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                color: #d1d5db;
+                margin-bottom: 1rem;
+            }
+
+            .app-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem 2rem;
+
+                li {
+                    font-size: 0.85rem;
+                    color: #d1d5db;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    .list-dot {
+                        width: 4px;
+                        height: 4px;
+                        background: #ffffff;
+                        border-radius: 50%;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .prod-card-image {
+        flex: 0 0 340px;
+        background: #1f1f1f;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid rgba(255,255,255,0.05);
+
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+        }
+    }
+}
+
+// -------- Featured Solutions Section --------
+.prod-featured {
+    background-color: #f5f5f4;
+    padding: 5rem 0;
+    
+    .feat-inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 2.5rem;
+    }
+
+    .feat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 3.5rem;
+    }
+
+    .feat-left {
+        .feat-label {
+            display: block;
+            color: var(--brand-teal);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .feat-title {
+            font-family: var(--font-display);
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.15;
+            margin: 0;
+        }
+    }
+
+    .feat-right {
+        text-align: right;
+        max-width: 480px;
+
+        .feat-desc {
+            color: #555555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0 0 0.8rem 0;
+        }
+
+        .feat-link {
+            display: inline-block;
+            color: var(--brand-teal);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: opacity 0.2s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .feat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .feat-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .feat-image-wrap {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+            }
+        }
+
+        &:hover .feat-image-wrap img {
+            transform: scale(1.03);
+        }
+
+        .feat-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            .feat-badge {
+                color: var(--brand-teal);
+                font-size: 0.7rem;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                margin-bottom: 0.6rem;
+                display: block;
+            }
+
+            .feat-card-title {
+                font-family: var(--font-display);
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: #1a1a1a;
+                margin: 0 0 0.75rem 0;
+                line-height: 1.3;
+            }
+
+            .feat-card-desc {
+                color: #666666;
+                font-size: 0.85rem;
+                line-height: 1.6;
+                margin: 0 0 1.5rem 0;
+                flex: 1;
+            }
+
+            .feat-card-link {
+                color: var(--brand-teal);
+                font-weight: 600;
+                font-size: 0.85rem;
+                text-decoration: none;
+                transition: opacity 0.2s;
+                align-self: flex-start;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
